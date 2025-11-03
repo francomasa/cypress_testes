@@ -8,6 +8,7 @@ describe('Teste para a pagina de candidatura', () => {
     it('Deve levar o usuario ate o formulario de inscrição', () => {
         cy.get('.Vaga_vagaLink__DeFkk').first().click()
         cy.get('input').should('have.length', 7)
+        //cy.screenshot('tela-inscricao')
     })
 
     it('Deve peencher o formulario de inscrição', () => {
@@ -23,6 +24,17 @@ describe('Teste para a pagina de candidatura', () => {
         cy.on('window:alert', (conteudo) => {
             expect(conteudo).contain('Obrigado pela candidatura!')
         })
+
+        cy.screenshot('tela-inscricao-preenchido')
+        // cy.on('uncaught:exception', (err, runnable) => {
+        //     // returning false here prevents Cypress from failing the test
+        //     // if the error message includes "Failed to fetch"
+        //     if (err.message.includes('Failed to fetch')) {
+        //         return false;
+        //     }
+        //     // If it's another error, let Cypress fail the test
+        //     return true;
+        //     });
     })
 
 })
