@@ -8,7 +8,7 @@ describe('Teste para a pagina de candidatura', () => {
     it('Deve levar o usuario ate o formulario de inscrição', () => {
         cy.get('.Vaga_vagaLink__DeFkk').first().click()
         cy.get('input').should('have.length', 7)
-        //cy.screenshot('tela-inscricao')
+        cy.screenshot('tela-inscricao')
     })
 
     it('Deve peencher o formulario de inscrição', () => {

@@ -9,7 +9,7 @@ describe('Teste para a home', () => {
         cy.get('.ListaVagas_vagas__gmNZn > li').should('have.length', 4)
     })
 
-     it('Deve filtrar por Fullstack com enter', () => {
+    it('Deve filtrar por Fullstack com enter', () => {
         // fazer uma filtragem por fullstatck com o comando enter no fim
         cy.get('.FormVagas_campo__E1ppF').type('fullstack{enter}')
         cy.get('.ListaVagas_vagas__gmNZn > li').should('have.length', 1)

@@ -9,9 +9,14 @@ module.exports = defineConfig({
   reporter: 'mochawesome',
   reporterOptions: {
     reportDir: 'cypress/relatorio',
-    overwrite: true,
+    overwrite: false,
     html: true,
     json: false,
+    reportFilename: "relatorio-teste", // nome fixo do arquivo
+    embeddedScreenshots: true,
+    inlineAssets: true,
+    saveAllAttempts: true,
+    timestamp: 'ddmmyyyy'
     //timestamp: 'ddmmyyyy_HHMMss'
   }
 });
